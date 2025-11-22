@@ -1,0 +1,6 @@
+discord.py==2.3.2
+python-dotenv==1.0.1
+requests==2.31.0
+openrouter-py==0.1.5
+
+# The above are the required packages for the Discord bot and environment variable management. run pip install -r requirements.txt
