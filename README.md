@@ -15,7 +15,7 @@ capability.
 
 ### 🍕 10+ Curated Pizza Recipes
 
-Users can request fully detailed recipes instantly.
+Users can request fully detailed recipes instantly!
 
 ### 🤖 AI Pizza Chatbot
 
