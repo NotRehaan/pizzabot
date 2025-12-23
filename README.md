@@ -42,7 +42,7 @@ Leverages `discord.py` for stable bot commands and interactions.
 
 ### 🤝 Collaboration
 
-Built by **Rehaan** and **Muhammad** (GitHub: `anotherMuhammad`).
+Built by **Rehaan** and **Muhammad** (GitHub: `anotherMuhammad`)!
 
 ### 📚 Extensible System
 
