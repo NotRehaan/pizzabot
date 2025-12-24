@@ -25,7 +25,7 @@ class DoughBot(commands.Cog):
         await interaction.response.defer(thinking=True)
 
         try:
-            client = OpenRouter(api_key="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")
+            client = OpenRouter(api_key=OPENROUTER_API_KEY)
             response = client.chat.send(
                 model="cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
                 messages=[{"role": "user", "content": prompt}]
