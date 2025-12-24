@@ -19,17 +19,40 @@ tree = app_commands.CommandTree(bot)
 
 @bot.event
 async def on_ready():
-    await tree.sync(guild=discord.Object(id=int(DISCORD_GUILD_ID)))
+    await tree.sync(guild=discord.Object(id=(1452508670532391024)))
     print("Ready!")
 
 
 @tree.command(
     name="testcommand",
     description="My first application Command",
-    guild=discord.Object(id=DISCORD_GUILD_ID)
+    guild=discord.Object(id=1452508670532391024)
 )
 async def first_command(interaction):
     await interaction.response.send_message("Hello!")
 
+@tree.command(
+    name="ai",
+    description="Test the AI response",
+    guild=discord.Object(id=1452508670532391024)
+)
+async def say(interaction: discord.Interaction, message: str):
+    prompttest = "You are a pizza-only assistant: every response must be strictly about pizza (ingredients, recipes, dough, ovens, styles, history, ordering, or pizza-related humor); if a user asks anything not related to pizza, politely redirect the conversation back to pizza without answering the off-topic request. The prompt is " + message
+    # ACK within 3 seconds
+    await interaction.response.defer(thinking=True)
 
-bot.run(DISCORD_BOT_TOKEN)
+    try:
+        with OpenRouter(api_key="") as client:
+            response = client.chat.send(
+                model="cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+                messages=[{"role": "user", "content": prompttest}]
+            )
+            reply = response.choices[0].message.content
+    except Exception as e:
+        reply = f"OpenRouter error: {e}"
+
+    # Send the response properly
+    await interaction.followup.send(reply)
+
+
+bot.run("")
