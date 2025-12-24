@@ -3,11 +3,13 @@ from discord import app_commands
 from discord.ext import commands
 from openrouter import OpenRouter  
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 GUILD_ID = 1453205366203748453
 
-class DoughBot(commands.Cog):
+class askpizza(commands.Cog):
     """Pizza-only AI cog"""
 
     def __init__(self, bot: commands.Bot):
@@ -38,4 +40,4 @@ class DoughBot(commands.Cog):
 
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(DoughBot(bot))
+    await bot.add_cog(askpizza(bot))

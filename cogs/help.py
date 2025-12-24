@@ -29,7 +29,7 @@ class help(commands.Cog):
             inline=False
         )
         embed.add_field(
-            name="/recipes",
+            name="/recipeselect",
             value="gives you the choice of 10 whole pizza recipes to choose from!\nWill display the full recipes for you to read and make!",
             inline=False
         )

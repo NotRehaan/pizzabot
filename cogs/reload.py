@@ -8,9 +8,7 @@ class ReloadCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # -------------------------
-    # Reload command
-    # -------------------------
+ 
     @app_commands.command(
         name="reload",
         description="Reload a specified cog"
@@ -29,9 +27,6 @@ class ReloadCog(commands.Cog):
                 ephemeral=True
             )
 
-    # -------------------------
-    # List loaded cogs
-    # -------------------------
     @app_commands.command(
         name="cogs",
         description="List all currently loaded cogs"
