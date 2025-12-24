@@ -1,4 +1,4 @@
-# Pizzabot - Your Personal Pizza Recipe & Chat Assistant
+# Pizzabot - Your Personal Pizza Recipe & Chat Assistant!
 
 Pizzabot is a Python-powered Discord bot that delivers a seamless,
 interactive pizza-making experience.\
