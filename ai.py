@@ -17,6 +17,7 @@ reply = response.choices[0]
 print("AI:", reply)
 
 
+
 # @tree.command(
 #     name="ai",
 #     description="Test the AI response",
